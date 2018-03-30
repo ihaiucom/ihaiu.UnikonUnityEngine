@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02669AC6-1B90-40E9-A440-136DC845131D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NodeCanvasForServer</RootNamespace>
+    <AssemblyName>NodeCanvasForServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NO_UNITY</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\CanvasGroup_NC.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\Connection.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\Graph.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\GraphInfoAttribute.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\GraphOwner.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\Interfaces.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\Internal\GraphSerializationData.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\Internal\MissingConnection.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\Internal\MissingNode.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Graphs\Node.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\ReflectionWrappers\ReflectedAction.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\ReflectionWrappers\ReflectedFunction.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\ReflectionWrappers\ReflectedMethodWrapper.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Status.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\ActionList.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\ActionTask.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\ConditionList.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\ConditionTask.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\Internal\MissingAction.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\Internal\MissingCondition.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\ITaskSystem.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\Task.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Tasks\TaskAgent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\Attributes.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\BBParameter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\Blackboard.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\GlobalBlackboard.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\IBlackboard.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\Internal\BBObjectParameter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\Internal\BlackboardSource.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\Internal\fsBBParameterProcessor.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\Internal\MissingBBParameterType.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\Internal\MissingVariableType.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\SyncBlackboard.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\Runtime\Variables\Variable.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Design\Attributes.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Other\Enumerations.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Other\EventData.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Other\OperationTools.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Other\RectUtils.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Other\ReflectionTools.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Other\StringUtils.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\DeserializeFromAttribute.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\fsRecoveryProcessor.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\fsUnityObjectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsArrayConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsDateConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsDictionaryConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsEnumConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsForwardConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsGuidConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsIEnumerableConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsKeyValuePairConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsNullableConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsPrimitiveConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsReflectedConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsTypeConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\fsWeakReferenceConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\AnimationCurve_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\Bounds_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\Gradient_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\GUIStyleState_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\GUIStyle_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\Keyframe_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\LayerMask_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\RectOffset_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Converters\Unity\Rect_DirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsAotCompilationManager.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsBaseConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsConfig.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsContext.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsConverterRegistrar.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsData.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsDirectConverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsExceptions.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsIgnoreAttribute.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsISerializationCallbacks.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsJsonParser.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsJsonPrinter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsMemberSerialization.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsObjectAttribute.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsObjectProcessor.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsPropertyAttribute.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsResult.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\fsSerializer.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Internal\fsCyclicReferenceManager.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Internal\fsOption.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Internal\fsPortableReflection.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Internal\fsTypeExtensions.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Internal\fsVersionedType.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Internal\fsVersionManager.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Reflection\fsMetaProperty.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Reflection\fsMetaType.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Reflection\fsReflectionUtility.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\Full Serializer\Reflection\fsTypeCache.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\IMissingRecoverable.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\JSONSerializer.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\SerializedConstructorInfo.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\SerializedEventInfo.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\SerializedFieldInfo.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\SerializedMethodBaseInfo.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\SerializedMethodInfo.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\SerializedTypeInfo.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Services\Logger.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Services\MessageRouter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Services\MonoManager.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Services\Threader.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\ActionListPlayer\ActionListPlayer.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\BehaviourTree.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\BehaviourTreeOwner.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\BTConnection.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\BTNode.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\BTComposite.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\BTDecorator.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\BinarySelector.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\FlipSelector.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\Parallel.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\PrioritySelector.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\ProbabilitySelector.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\Selector.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\Sequencer.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\StepIterator.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Composites\Switch.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\ConditionalEvaluator.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Filter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Guard.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Interruptor.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Inverter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Iterator.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Optional.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Remapper.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Repeater.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Setter.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\Timeout.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Decorators\WaitUntil.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Leafs\ActionNode.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Leafs\ConditionNode.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Leafs\NestedFSM.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Leafs\NodeToggler.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Leafs\RootSwitcher.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\BehaviourTrees\Nodes\Leafs\SubTree.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\FSM.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\FSMConnection.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\FSMOwner.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\FSMState.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\Nodes\ActionState.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\Nodes\AnyState.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\Nodes\ConcurrentState.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\Nodes\NestedBTState.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\Nodes\NestedFSMState.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Modules\StateMachines\Nodes\SuperActionState.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\ComposeVector.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\DecomposeVector.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\Dictionary Specific\AddElementToDictionary.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\Dictionary Specific\GetDictionaryElement.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\EvaluateCurve.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\GetOtherBlackboardVariable.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\GetToString.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\AddElementToList.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\ClearList.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\GetCloserGameObjectInList.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\GetIndexOfElement.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\GetListCount.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\InsertElementToList.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\PickListElement.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\PickRandomListElement.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\RemoveElementFromList.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\SetListElement.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\ShuffleList.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\List Specific\SortGameObjectListByDistance.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\LoadBlackboard.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\NormalizeVector.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SampleCurve.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SaveBlackboard.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetBoolean.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetBooleanRandom.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetEnum.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetFloat.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetFloatRandom.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetInt.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetIntRandom.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetOtherBlackboardVariable.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetVariable.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\SetVector3.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Blackboard\TriggerBoolean.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\CreateGameObject.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\CreatePrimitive.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\DestroyGameObject.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\FindAllWithName.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\FindAllWithTag.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\FindChildByName.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\FindClosestWithTag.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\FindObjectOfType.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\FindObjectsOfType.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\FindWithName.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\FindWithTag.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\GetAllChildGameObjects.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\GetComponent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\GetDistance.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\GetGameObjectPosition.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\InstantiateGameObject.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\LookAt.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\RemoveComponent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\GameObject\SetObjectActive.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\ExecuteFunction.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\ExecuteStaticFunction.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\GetField.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\GetProperty.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\ImplementedAction.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\Multiplatform\ExecuteFunction_Multiplatform.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\Multiplatform\ExecuteStaticFunction_Multiplatform.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\Multiplatform\GetProperty_Multiplatform.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\Multiplatform\ImplementedAction_Multiplatform.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\Multiplatform\SetProperty_Multiplatform.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\SendMessage.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\SendMessageToType.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\SetField.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\ScriptControl\SetProperty.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\DebugBeep.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\DebugDrawLine.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\DebugLogText.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\DebugLogVariable.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\ForceFinishGraph.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\GraphOwnerControl.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\RunForever.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\SendEvent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\SendEventToObjects.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\ShoutEvent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\SwitchBehaviour.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Actions\Utility\Wait.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\CheckBoolean.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\CheckEnum.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\CheckFloat.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\CheckInt.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\CheckString.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\CheckUnityObject.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\CheckVariable.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\CheckVectorDistance.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\Dictionaries\TryGetValue.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\Lists\ListContainsElement.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\Lists\ListIsEmpty.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Blackboard\StringContains.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\ScriptControl\CheckCSharpEvent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\ScriptControl\CheckField.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\ScriptControl\CheckFunction.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\ScriptControl\CheckProperty.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\ScriptControl\CheckStaticCSharpEvent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\ScriptControl\CheckUnityEvent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\ScriptControl\Multiplatform\CheckFunction_Multiplatform.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\ScriptControl\Multiplatform\CheckProperty_Multiplatform.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Utility\CheckEvent.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Utility\CheckEventValue.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Utility\DebugCondition.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Utility\Probability.cs" />
+    <Compile Include="ParadoxNotion\NodeCanvas\Tasks\Conditions\Utility\Timeout.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ParadoxNotion\NodeCanvas\!QuickStart!.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ParadoxNotion\NodeCanvas\!ReadMe!.txt" />
+    <Content Include="ParadoxNotion\NodeCanvas\Framework\_Commons\Runtime\Serialization\_LICENSE - FULL SERIALIZER.txt" />
+    <Content Include="ParadoxNotion\NodeCanvas\GraphOwnerGizmo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnikonUnityEngine\UnikonUnityEngine.csproj">
+      <Project>{2d94c609-fd77-47ec-880e-38714ab72b9d}</Project>
+      <Name>UnikonUnityEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ParadoxNotion\NodeCanvas\Framework\Design\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

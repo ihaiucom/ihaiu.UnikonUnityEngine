@@ -13,5 +13,8 @@ namespace UnityEngine
     public class Time
     {
         public static float deltaTime = 0.033f;
+
+        public static float time = 0;
     }
+
 }

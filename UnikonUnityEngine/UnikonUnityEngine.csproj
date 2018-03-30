@@ -54,6 +54,10 @@
     <Compile Include="ET\Helper\TimeHelper.cs" />
     <Compile Include="ET\MainThreadRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unikon\Application.cs" />
+    <Compile Include="Unikon\Attributes\AddComponentMenu.cs" />
+    <Compile Include="Unikon\Attributes\ContextMenu.cs" />
+    <Compile Include="Unikon\Attributes\ISerializationCallbackReceiver.cs" />
     <Compile Include="Unikon\Bounds.cs" />
     <Compile Include="Unikon\Color.cs" />
     <Compile Include="Unikon\Color32.cs" />
@@ -72,6 +76,7 @@
     <Compile Include="Unikon\Objects\MonoBehaviour.cs" />
     <Compile Include="Unikon\Objects\Object.cs" />
     <Compile Include="Unikon\Objects\SceneManager.cs" />
+    <Compile Include="Unikon\Objects\ScriptableObject.cs" />
     <Compile Include="Unikon\Objects\UnikonEngine.cs" />
     <Compile Include="ET\OneThreadSynchronizationContext.cs" />
     <Compile Include="Unikon\Quaternion.cs" />
