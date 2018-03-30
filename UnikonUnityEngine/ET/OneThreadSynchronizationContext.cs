@@ -16,6 +16,11 @@ public class OneThreadSynchronizationContext
         }
     }
 
+    public void Execute(Action action)
+    {
+        Run(action);
+    }
+
     public void Update()
     {
         lock (mainThreadActions)

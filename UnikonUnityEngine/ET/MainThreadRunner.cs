@@ -12,7 +12,7 @@ using System.Threading;
 
 public class MainThreadRunner
 {
-    private static OneThreadSynchronizationContext content;
+    public static OneThreadSynchronizationContext content { get; private set; }
     public static void Install()
     {
         content = new OneThreadSynchronizationContext();
@@ -32,4 +32,6 @@ public class MainThreadRunner
     {
         content.Run(callback);
     }
+
+
 }

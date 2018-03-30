@@ -7,6 +7,8 @@ namespace UnityEngine
 {
     public class Scene
     {
+        internal bool IsDisposed { get; set; }
+
         private readonly List<GameObject> m_RootGameObjects;
 
         public List<GameObject> rootGameObjects
@@ -37,7 +39,7 @@ namespace UnityEngine
             return null;
         }
 
-        internal void AddGameObject(GameObject gameObject)
+        public void AddGameObject(GameObject gameObject)
         {          
             if (gameObject.scene != null)
             {

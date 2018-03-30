@@ -14,11 +14,9 @@ namespace TestUnkonUnityEngeine
         {
             MainThreadRunner.Install();
 
-            Scene scene = new Scene();
             GameObject go = new GameObject("Unit");
             MoveComponent move = go.AddComponent<MoveComponent>();
             move.MoveTo(new Vector3(100, 0, 0));
-
 
             while (true)
             {
@@ -27,7 +25,7 @@ namespace TestUnkonUnityEngeine
                     Thread.Sleep(100);
                     MainThreadRunner.Update();
                     //Game.EventSystem.Update();
-                    scene.Update();
+                    SceneManager.Update();
                 }
                 catch (Exception e)
                 {
@@ -35,5 +33,6 @@ namespace TestUnkonUnityEngeine
                 }
             }
         }
+
     }
 }

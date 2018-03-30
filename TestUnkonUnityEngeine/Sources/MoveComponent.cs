@@ -28,7 +28,7 @@ public class MoveComponent : MonoBehaviour
 
     protected void Update()
     {
-        Loger.LogTag(TAG, "Update");
+        Loger.LogTag(TAG, "Update " + transform.position);
         float distance = Vector3.Distance(transform.position, target);
         if(distance > 0.01f)
         {
