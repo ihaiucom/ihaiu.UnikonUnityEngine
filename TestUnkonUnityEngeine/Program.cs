@@ -12,26 +12,28 @@ namespace TestUnkonUnityEngeine
     {
         static void Main(string[] args)
         {
+            MainThreadRunner.Install();
+
             Scene scene = new Scene();
             GameObject go = new GameObject("Unit");
             MoveComponent move = go.AddComponent<MoveComponent>();
             move.MoveTo(new Vector3(100, 0, 0));
 
-            Console.ReadLine();
 
-            //while (true)
-            //{
-            //    try
-            //    {
-            //        Thread.Sleep(1);
-            //        contex.Update();
-            //        Game.EventSystem.Update();
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        Log.Error(e);
-            //    }
-            //}
+            while (true)
+            {
+                try
+                {
+                    Thread.Sleep(100);
+                    MainThreadRunner.Update();
+                    //Game.EventSystem.Update();
+                    scene.Update();
+                }
+                catch (Exception e)
+                {
+                    Loger.LogError(e);
+                }
+            }
         }
     }
 }

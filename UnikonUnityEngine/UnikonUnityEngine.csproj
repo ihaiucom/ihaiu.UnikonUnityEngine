@@ -61,6 +61,7 @@
     <Compile Include="Unikon\Objects\Object.cs" />
     <Compile Include="Unikon\Objects\SceneManager.cs" />
     <Compile Include="Unikon\Objects\UnikonEngine.cs" />
+    <Compile Include="Unikon\OneThreadSynchronizationContext.cs" />
     <Compile Include="Unikon\Quaternion.cs" />
     <Compile Include="Unikon\Ray.cs" />
     <Compile Include="Unikon\Ray2D.cs" />
