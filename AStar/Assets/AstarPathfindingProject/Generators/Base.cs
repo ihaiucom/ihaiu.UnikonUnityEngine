@@ -472,10 +472,10 @@ namespace Pathfinding {
 			finalRaycastRadius = thickRaycastDiameter*scale*0.5F;
 		}
 
-		/** Returns if the position is obstructed.
+        /** Returns if the position is obstructed.
 		 * If #collisionCheck is false, this will always return true.\n
 		 */
-		public bool Check (Vector3 position) {
+        public bool Check (Vector3 position) {
 			if (!collisionCheck) {
 				return true;
 			}
@@ -627,7 +627,7 @@ namespace Pathfinding {
 			return hits.ToArray();
 		}
 
-		public void DeserializeSettingsCompatibility (GraphSerializationContext ctx) {
+        public void DeserializeSettingsCompatibility (GraphSerializationContext ctx) {
 			type = (ColliderType)ctx.reader.ReadInt32();
 			diameter = ctx.reader.ReadSingle();
 			height = ctx.reader.ReadSingle();

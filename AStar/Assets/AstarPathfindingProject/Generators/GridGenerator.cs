@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using Math = System.Math;
 using UnityEngine;
-#if UNITY_5_5_OR_NEWER
 using UnityEngine.Profiling;
-#endif
 
 namespace Pathfinding {
 	using Pathfinding.Serialization;

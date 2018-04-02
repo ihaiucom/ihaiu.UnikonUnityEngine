@@ -73,7 +73,7 @@ namespace Pathfinding {
 		}
 
 		void Start () {
-			if (!AstarPath.active)
+			if (AstarPath.active == null)
 				throw new System.Exception("No AstarPath object in the scene");
 		}
 

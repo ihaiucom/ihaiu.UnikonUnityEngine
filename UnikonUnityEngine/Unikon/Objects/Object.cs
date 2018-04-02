@@ -74,36 +74,37 @@ namespace UnityEngine
         //     return this.m_InstanceID;
         // }
 
-//        public override bool Equals(object o)
-//        {
-//            return Object.CompareBaseObjects(this, o as Object);
-//        }
+        //        public override bool Equals(object o)
+        //        {
+        //            return Object.CompareBaseObjects(this, o as Object);
+        //        }
 
         // private static bool CompareBaseObjects(Object lhs, Object rhs)
         // {
         //     return lhs == rhs;
-//            if (lhs == null && rhs == null)
-//                return true;
-//            if (lhs != null && rhs != null)
-//                return lhs.m_InstanceID == rhs.m_InstanceID;
-//
-//            return false;
+        //            if (lhs == null && rhs == null)
+        //                return true;
+        //            if (lhs != null && rhs != null)
+        //                return lhs.m_InstanceID == rhs.m_InstanceID;
+        //
+        //            return false;
         // }
 
 
 
-//        public static T DeepClone<T>(T obj)
-//        {
-//            using (var ms = new MemoryStream())
-//            {
-//                var formatter = new BinaryFormatter();
-//                formatter.Serialize(ms, obj);
-//                ms.Position = 0;
-//
-//                return (T) formatter.Deserialize(ms);
-//            }
-//        }
-        
+        //        public static T DeepClone<T>(T obj)
+        //        {
+        //            using (var ms = new MemoryStream())
+        //            {
+        //                var formatter = new BinaryFormatter();
+        //                formatter.Serialize(ms, obj);
+        //                ms.Position = 0;
+        //
+        //                return (T) formatter.Deserialize(ms);
+        //            }
+        //        }
+
+
         public static Object Instantiate(Object original)
         {
             Object.CheckNullArgument((object) original, "The Object you want to instantiate is null.");

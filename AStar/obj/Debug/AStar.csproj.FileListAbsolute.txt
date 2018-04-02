@@ -1,2 +1,11 @@
 E:\zengfeng\github\ihaiu.UnikonUnityEngine\UnikonUnityEngine\AStar\obj\Debug\AStar.csprojResolveAssemblyReference.cache
 E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\obj\Debug\AStar.csprojResolveAssemblyReference.cache
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\bin\Debug\AStar.dll
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\bin\Debug\AStar.pdb
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\bin\Debug\Pathfinding.ClipperLib.dll
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\bin\Debug\Pathfinding.Ionic.Zip.Reduced.dll
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\bin\Debug\Pathfinding.Poly2Tri.dll
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\bin\Debug\UnikonUnityEngine.dll
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\bin\Debug\UnikonUnityEngine.pdb
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\obj\Debug\AStar.dll
+E:\zengfeng\github\ihaiu.UnikonUnityEngine\AStar\obj\Debug\AStar.pdb

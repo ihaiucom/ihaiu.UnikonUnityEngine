@@ -144,7 +144,7 @@ namespace Pathfinding.RVO {
 		public MovementPlane movementPlane {
 			get {
 				if (simulator != null) return simulator.movementPlane;
-				else if (RVOSimulator.active) return RVOSimulator.active.movementPlane;
+				else if (RVOSimulator.active != null) return RVOSimulator.active.movementPlane;
 				else return MovementPlane.XZ;
 			}
 		}

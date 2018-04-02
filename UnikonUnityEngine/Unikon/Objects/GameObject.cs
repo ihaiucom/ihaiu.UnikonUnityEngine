@@ -487,5 +487,13 @@ namespace UnityEngine
                 }                        
             }                
         }
+
+
+        public static Object Instantiate(Object original, Vector3 positon, Quaternion rotation)
+        {
+            throw new Exception("不能Instantiate");
+            return null;
+        }
+
     }
 }

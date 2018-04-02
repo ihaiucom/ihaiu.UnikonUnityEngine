@@ -700,7 +700,7 @@ public class AstarPath : VersionedMonoBehaviour {
 		// not repaint events to make sure that the gizmos do not interfere with any kind of scene picking.
 		// This will not have any visual impact as only repaint events will result in any changes on the screen.
 		// From testing it seems the only events that can happen during OnDrawGizmos are the mouseUp and repaint events.
-		if (Event.current.type != EventType.Repaint) return;
+		//if (Event.current.type != EventType.Repaint) return;
 
 		AstarProfiler.StartProfile("OnDrawGizmos");
 
@@ -731,16 +731,16 @@ public class AstarPath : VersionedMonoBehaviour {
 		AstarProfiler.EndProfile("OnDrawGizmos");
 	}
 
-#if !ASTAR_NO_GUI
-	/** Draws the InGame debugging (if enabled), also shows the fps if 'L' is pressed down.
-	 * \see #logPathResults PathLog
-	 */
-	private void OnGUI () {
-		if (logPathResults == PathLog.InGame && inGameDebugPath != "") {
-			GUI.Label(new Rect(5, 5, 400, 600), inGameDebugPath);
-		}
-	}
-#endif
+//#if !ASTAR_NO_GUI
+//	/** Draws the InGame debugging (if enabled), also shows the fps if 'L' is pressed down.
+//	 * \see #logPathResults PathLog
+//	 */
+//	private void OnGUI () {
+//		if (logPathResults == PathLog.InGame && inGameDebugPath != "") {
+//			GUI.Label(new Rect(5, 5, 400, 600), inGameDebugPath);
+//		}
+//	}
+//#endif
 
 	/** Prints path results to the log. What it prints can be controled using #logPathResults.
 	 * \see #logPathResults
@@ -1122,7 +1122,7 @@ public class AstarPath : VersionedMonoBehaviour {
 		}
 
 		// Disable GUILayout to gain some performance, it is not used in the OnGUI call
-		useGUILayout = false;
+		//useGUILayout = false;
 
 		// This class uses the [ExecuteInEditMode] attribute
 		// So Awake is called even when not playing
